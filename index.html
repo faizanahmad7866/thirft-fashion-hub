@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThriftFashionHub | Professional Archival Streetwear</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Plus+Jakarta+Sans:wght@200;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary: #111111;
+        --accent: #ff4b2b;
+        --bg-warm: #fdf8f4;
+        --text-muted: #666666;
+      }
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: var(--bg-warm);
+        color: var(--primary);
+        overflow-x: hidden;
+      }
+      .font-display {
+        font-family: 'Anton', sans-serif;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+      .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: #ffb703;
+        padding: 12px 0;
+        border-top: 2px solid #111;
+        border-bottom: 2px solid #111;
+        position: relative;
+        z-index: 20;
+      }
+      .marquee-content {
+        display: inline-block;
+        animation: marquee 30s linear infinite;
+      }
+      @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+      .product-card {
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+      }
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      }
+      .btn-primary {
+        background-color: var(--accent);
+        color: white;
+        transition: all 0.3s ease;
+      }
+      .hero-shape {
+        background-color: #fdb833;
+        width: 100%;
+        max-width: 320px;
+        height: 400px;
+        position: absolute;
+        top: 20px;
+        right: -10px;
+        z-index: -1;
+        border-radius: 8px;
+        transform: rotate(2deg);
+      }
+      .nav-link {
+        font-weight: 800;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: #111;
+        transition: all 0.2s;
+        position: relative;
+      }
+      .nav-link:hover {
+        color: var(--accent);
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--accent);
+        transition: width 0.3s;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      /* Fix for large background text overlapping */
+      .bg-text-footer {
+        font-size: clamp(3rem, 15vw, 220px);
+        line-height: 0.8;
+        pointer-events: none;
+        user-select: none;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
